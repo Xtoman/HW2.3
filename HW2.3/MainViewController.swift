@@ -12,10 +12,15 @@ class ViewController: UIViewController {
     @IBOutlet weak var loginTF: UITextField!
     @IBOutlet weak var passwordTF: UITextField!
     @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var forgetPasswordBTN: UIButton!
+    @IBOutlet weak var forgetLoginBTN: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        loginButton.layer.cornerRadius = 10.0
+        forgetLoginBTN.layer.cornerRadius = 10.0
+        forgetPasswordBTN.layer.cornerRadius = 10.0
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

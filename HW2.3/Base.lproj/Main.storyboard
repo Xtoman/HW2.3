@@ -80,8 +80,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="hod-at-8Cj"/>
                     <connections>
-                        <outlet property="LoginTF" destination="YVh-k1-Vse" id="tXZ-Fn-EXn"/>
-                        <outlet property="PasswordTf" destination="i1E-8Z-MH9" id="e4m-Jk-V41"/>
+                        <outlet property="loginButton" destination="xbP-dc-13s" id="5So-6b-R8k"/>
+                        <outlet property="loginTF" destination="YVh-k1-Vse" id="tXZ-Fn-EXn"/>
+                        <outlet property="passwordTF" destination="i1E-8Z-MH9" id="e4m-Jk-V41"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

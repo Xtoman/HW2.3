@@ -9,8 +9,9 @@ import UIKit
 
 class ViewController: UIViewController {
  
-    @IBOutlet weak var LoginTF: UITextField!
-    @IBOutlet weak var PasswordTf: UITextField!
+    @IBOutlet weak var loginTF: UITextField!
+    @IBOutlet weak var passwordTF: UITextField!
+    @IBOutlet weak var loginButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,7 +20,7 @@ class ViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
-        welcomeVC.login = LoginTF.text
+        welcomeVC.login = loginTF.text
        
     }
     
@@ -29,8 +30,8 @@ class ViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        LoginTF.text = ""
-        PasswordTf.text = ""
+        loginTF.text = ""
+        passwordTF.text = ""
     }
 
     @IBAction func LoginButton(_ sender: Any) {
@@ -41,10 +42,10 @@ class ViewController: UIViewController {
         }))
  
         
-        if LoginTF.text != "Admin" || PasswordTf.text != "admin" {
+        if loginTF.text != "Admin" || passwordTF.text != "admin" {
             self.present(alert, animated: true, completion: nil)
-            LoginTF.text?.removeAll()
-            PasswordTf.text?.removeAll()
+            loginTF.text?.removeAll()
+            passwordTF.text?.removeAll()
         }
     }
     
@@ -70,8 +71,8 @@ class ViewController: UIViewController {
     
     @IBAction func unwind(for segue: UIStoryboardSegue) {
         guard let welcomeVC = segue.source as? WelcomeViewController else { return }
-        LoginTF.text = welcomeVC.welcomeLabel.text
-        PasswordTf.text = welcomeVC.password
+        loginTF.text = welcomeVC.welcomeLabel.text
+        passwordTF.text = welcomeVC.password
         
     }
     
